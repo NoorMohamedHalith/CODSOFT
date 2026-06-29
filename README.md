@@ -3,7 +3,7 @@
 <div align="center">
 
 ![CODSOFT](https://img.shields.io/badge/CODSOFT-UI%2FUX%20Internship-6366F1?style=for-the-badge&logo=figma&logoColor=white)
-![Status](https://img.shields.io/badge/Status-In%20Progress-F59E0B?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-22C55E?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)
 ![Figma](https://img.shields.io/badge/Tool-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
@@ -41,10 +41,10 @@ A premium SaaS email template system for FlowSphere — a modern productivity pl
 
 ---
 
-### 🔄 Task 3 — Restaurant Menu UI Design
+### ✅ Task 3 — Restaurant Menu UI Design
 > **Folder:** [`Task-3_Restaurant_Menu/`](./Task-3_Restaurant_Menu/)
 
-A modern, visually immersive restaurant menu app design. Features category navigation, food cards, detail screens, cart flow, and a clean ordering experience designed for mobile-first users.
+A premium, nature-inspired restaurant menu and table reservation app concept for GreenLife Café. Features a fluid 2-column food card category grid, calorie indicators, interactive shopping cart, table reservation system, and 16 widescreen slide presentation case study deck.
 
 ---
 

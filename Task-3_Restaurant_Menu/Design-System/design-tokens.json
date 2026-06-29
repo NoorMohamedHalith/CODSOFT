@@ -1,0 +1,82 @@
+{
+  "name": "GreenLife Café Design System Tokens",
+  "version": "1.0.0",
+  "colors": {
+    "primary": {
+      "value": "#2E7D32",
+      "description": "Forest Green - 60% dominant color for organic brand feel."
+    },
+    "secondary": {
+      "value": "#81C784",
+      "description": "Leaf Green - 30% supporting color for badges and highlights."
+    },
+    "accent": {
+      "value": "#FF9800",
+      "description": "Warm Orange - 10% focal accent for CTAs, ratings, and special features."
+    },
+    "background": {
+      "value": "#FFF8E7",
+      "description": "Warm Cream - Main screen surface background."
+    },
+    "surface": {
+      "value": "#FFFFFF",
+      "description": "Pure White - Fills for cards and interactive inputs."
+    },
+    "text": {
+      "value": "#263238",
+      "description": "Charcoal Slate - High contrast text color for long reading comfort."
+    },
+    "textMuted": {
+      "value": "#546E7A",
+      "description": "Slate Gray - Subheadings and meta descriptions."
+    },
+    "veg": {
+      "value": "#4CAF50",
+      "description": "Vegetarian indicator green."
+    },
+    "nonVeg": {
+      "value": "#D84315",
+      "description": "Non-vegetarian indicator red."
+    }
+  },
+  "typography": {
+    "fontFamilies": {
+      "heading": "Poppins, sans-serif",
+      "body": "Inter, sans-serif"
+    },
+    "fontSize": {
+      "h1": "28px",
+      "h2": "22px",
+      "h3": "18px",
+      "body": "16px",
+      "caption": "14px",
+      "micro": "12px"
+    },
+    "lineHeight": {
+      "heading": "1.3",
+      "body": "1.5",
+      "caption": "1.4"
+    }
+  },
+  "spacing": {
+    "scale": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "xxl": "48px"
+    }
+  },
+  "borderRadius": {
+    "small": "8px",
+    "medium": "16px",
+    "large": "24px",
+    "circle": "50%"
+  },
+  "shadows": {
+    "soft": "0 8px 24px rgba(46, 125, 50, 0.08)",
+    "medium": "0 12px 32px rgba(46, 125, 50, 0.12)",
+    "glow": "0 8px 20px rgba(255, 152, 0, 0.25)"
+  }
+}

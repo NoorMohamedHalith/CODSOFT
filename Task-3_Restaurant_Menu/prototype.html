@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLife Café — Interactive UI/UX Mobile Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div style="background: linear-gradient(90deg, #2E7D32 0%, #1E4620 100%); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg style="width: 28px; height: 28px; fill: #81C784;" viewBox="0 0 24 24">
+        <path d="M17 8C14.24 8 12.08 9.94 11.23 12.5C11.75 12.18 12.35 12 13 12C14.66 12 16 13.34 16 15C16 16.66 14.66 18 13 18C11.69 18 10.58 17.16 10.17 16C9.58 14.32 8 13 6.5 13C5.67 13 4 13.67 4 15.5C4 17.43 6.13 19.34 8.78 19.86C9.17 20.57 9.89 21.06 10.74 21.06C11.59 21.06 12.31 20.57 12.7 19.86C13.64 19.95 14.61 20 15.58 19.68C17 19.22 18.25 18.25 19.06 17H19V11.56C19.78 10.82 20.3 9.82 20.44 8.7L20.88 5.16L17 8Z"/>
+      </svg>
+      <div>
+        <h2 style="font-family: var(--font-heading); font-size: 16px; color: #FFF; font-weight: 600;">GreenLife Café Mobile App</h2>
+        <p style="font-size: 11px; color: #81C784;">CODSOFT UI/UX Internship — Task 3 Interactive Prototype</p>
+      </div>
+    </div>
+    <div style="display: flex; gap: 12px;">
+      <a href="./Case-Study/case-study.md" style="padding: 8px 16px; background: rgba(255,255,255,0.08); border-radius: 20px; font-size: 12px; color: #FFF; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); font-weight: 500; transition: var(--transition-smooth);">View Case Study</a>
+      <a href="https://github.com/NoorMohamedHalith/CODSOFT" target="_blank" style="padding: 8px 16px; background: var(--color-accent); border-radius: 20px; font-size: 12px; color: #FFF; text-decoration: none; font-weight: 600; transition: var(--transition-smooth); box-shadow: var(--shadow-glow);">GitHub Repository</a>
+    </div>
+  </div>
+
+  <!-- Main Grid Layout -->
+  <div class="simulator-container">
+    
+    <!-- Left Hand: Interactive Navigation Control Panel -->
+    <div class="control-panel">
+      <div>
+        <h1>GreenLife Café UI Simulator</h1>
+        <p style="margin-top: 8px;">Experience the complete mobile app flow using our interactive simulator. Switch screens manually using the triggers below or interact directly with the mobile device viewport.</p>
+      </div>
+
+      <div class="hotspot-toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="hotspotToggle" checked>
+          <span class="slider"></span>
+        </</label>
+        <div>
+          <div style="font-weight: 600; font-size: 14px; color: #FFF;">Hotspot Indicators</div>
+          <div style="font-size: 11px; color: #94A3B8;">Highlight click targets on the app screens</div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-family: var(--font-heading); font-size: 14px; color: #81C784; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; font-weight: 600;">Simulation Flow steps</h3>
+        <div class="flow-steps">
+          <button class="flow-step-btn active" onclick="setView('cover')">1. Splash Cover Screen <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('about')">2. About GreenLife story <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('categories')">3. Menu Categories Grid <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('salads')">4. Salads Category <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('burgers')">5. Burgers Category <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('pizza')">6. Wood-fired Pizza <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('drinks')">7. Juices & Beverages <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('desserts')">8. Desserts Page <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('reservation')">9. Table Reservation Form <span>→</span></button>
+          <button class="flow-step-btn" onclick="setView('success')">10. Booking Success Confirmation <span>→</span></button>
+        </div>
+      </div>
+      
+      <div style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 12px; color: #64748B;">
+        Designed by: <strong style="color: #FFF;">Noor Mohamed Halith</strong><br>
+        CODSOFT UI/UX Internship Program 2025
+      </div>
+    </div>
+
+    <!-- Center: Interactive Device Viewport Frame -->
+    <div class="device-viewport-wrapper">
+      <div class="mobile-device hotspot-active" id="deviceFrame">
+        <div class="app-canvas">
+          
+          <!-- Shared Header (Only for sub-screens, controlled by script) -->
+          <div class="app-header" id="appHeader" style="display: none;">
+            <button class="btn-icon" onclick="goBack()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="app-logo-area">
+              <svg viewBox="0 0 24 24"><path d="M17 8C14.24 8 12.08 9.94 11.23 12.5C11.75 12.18 12.35 12 13 12C14.66 12 16 13.34 16 15C16 16.66 14.66 18 13 18C11.69 18 10.58 17.16 10.17 16C9.58 14.32 8 13 6.5 13C5.67 13 4 13.67 4 15.5C4 17.43 6.13 19.34 8.78 19.86C9.17 20.57 9.89 21.06 10.74 21.06C11.59 21.06 12.31 20.57 12.7 19.86C13.64 19.95 14.61 20 15.58 19.68C17 19.22 18.25 18.25 19.06 17H19V11.56C19.78 10.82 20.3 9.82 20.44 8.7L20.88 5.16L17 8Z"/></svg>
+              <span>GreenLife</span>
+            </div>
+            <button class="btn-icon" onclick="toggleCart()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+              <span id="cartCountBadge" style="position: absolute; top: 0; right: 0; background: var(--color-accent); color: white; border-radius: 50%; width: 16px; height: 16px; font-size: 9px; display: flex; justify-content: center; align-items: center; font-weight: 700; display: none;">0</span>
+            </button>
+          </div>
+
+          <!-- Views -->
+          <div class="views-container">
+            
+            <!-- View 1: Cover Screen -->
+            <div class="app-view active" id="view-cover">
+              <div class="cover-screen">
+                <div class="cover-logo-wrapper">
+                  <svg viewBox="0 0 24 24"><path d="M17 8C14.24 8 12.08 9.94 11.23 12.5C11.75 12.18 12.35 12 13 12C14.66 12 16 13.34 16 15C16 16.66 14.66 18 13 18C11.69 18 10.58 17.16 10.17 16C9.58 14.32 8 13 6.5 13C5.67 13 4 13.67 4 15.5C4 17.43 6.13 19.34 8.78 19.86C9.17 20.57 9.89 21.06 10.74 21.06C11.59 21.06 12.31 20.57 12.7 19.86C13.64 19.95 14.61 20 15.58 19.68C17 19.22 18.25 18.25 19.06 17H19V11.56C19.78 10.82 20.3 9.82 20.44 8.7L20.88 5.16L17 8Z"/></svg>
+                </div>
+                <h1 class="cover-title">GreenLife Café</h1>
+                <p class="cover-tagline">Fresh • Healthy • Delicious</p>
+                
+                <div class="cover-image-container">
+                  <!-- Fallback vector if image fails -->
+                  <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=600" alt="Avocado Salad Bowl" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%232E7D32%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22>Bowl</text></svg>'">
+                </div>
+                
+                <button class="btn-primary interactive-hotspot" onclick="setView('about')">Start Exploring</button>
+              </div>
+            </div>
+
+            <!-- View 2: About Screen -->
+            <div class="app-view" id="view-about">
+              <div class="about-screen">
+                <div class="about-header-img">
+                  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600" alt="Restaurant Interior">
+                </div>
+                <h2 class="section-title">Our Story</h2>
+                <p class="about-text">At GreenLife Café, we believe in the power of pure, fresh, organic ingredients. Every plate we serve is sourced directly from sustainable local farms, cooked in 100% olive oil with no artificial additives.</p>
+                
+                <div class="chef-card">
+                  <div class="chef-avatar">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=200" alt="Chef Marcus">
+                  </div>
+                  <div>
+                    <div class="chef-name">Chef Marcus Rivera</div>
+                    <div class="chef-title">Head Product Creator & Culinary Lead</div>
+                  </div>
+                </div>
+
+                <div class="interior-gallery">
+                  <div class="gallery-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=300" alt="Salad preparation"></div>
+                  <div class="gallery-img"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=300" alt="Organic vegetables"></div>
+                </div>
+
+                <div class="about-ctas">
+                  <button class="btn-secondary interactive-hotspot" onclick="setView('categories')">Explore Menu</button>
+                  <button class="btn-outline interactive-hotspot" onclick="setView('reservation')">Reserve Table</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 3: Categories Screen -->
+            <div class="app-view" id="view-categories">
+              <div class="categories-screen">
+                <h2 class="section-title" style="margin-bottom: 16px;">What would you like?</h2>
+                <div class="categories-grid">
+                  <div class="category-card interactive-hotspot" onclick="setView('salads')">
+                    <div class="category-img"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=300" alt="Salads"></div>
+                    <div class="category-info"><div class="category-name">Healthy Salads</div></div>
+                  </div>
+                  <div class="category-card interactive-hotspot" onclick="setView('burgers')">
+                    <div class="category-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=300" alt="Burgers"></div>
+                    <div class="category-info"><div class="category-name">Gourmet Burgers</div></div>
+                  </div>
+                  <div class="category-card interactive-hotspot" onclick="setView('pizza')">
+                    <div class="category-img"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=300" alt="Pizza"></div>
+                    <div class="category-info"><div class="category-name">Wood-Fired Pizza</div></div>
+                  </div>
+                  <div class="category-card interactive-hotspot" onclick="setView('drinks')">
+                    <div class="category-img"><img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?auto=format&fit=crop&q=80&w=300" alt="Drinks"></div>
+                    <div class="category-info"><div class="category-name">Fresh Juices</div></div>
+                  </div>
+                  <div class="category-card interactive-hotspot" onclick="setView('desserts')">
+                    <div class="category-img"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=300" alt="Desserts"></div>
+                    <div class="category-info"><div class="category-name">Organic Desserts</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- View 4: Salads Screen -->
+            <div class="app-view" id="view-salads">
+              <div class="food-list-screen">
+                <div class="food-list-header">
+                  <h2 class="section-title">Healthy Salads</h2>
+                </div>
+                <div class="food-cards-container" id="saladsList"></div>
+              </div>
+            </div>
+
+            <!-- View 5: Burgers Screen -->
+            <div class="app-view" id="view-burgers">
+              <div class="food-list-screen">
+                <div class="food-list-header">
+                  <h2 class="section-title">Gourmet Burgers</h2>
+                </div>
+                <div class="food-cards-container" id="burgersList"></div>
+              </div>
+            </div>
+
+            <!-- View 6: Pizza Screen -->
+            <div class="app-view" id="view-pizza">
+              <div class="food-list-screen">
+                <div class="food-list-header">
+                  <h2 class="section-title">Wood-Fired Pizza</h2>
+                </div>
+                <div class="food-cards-container" id="pizzaList"></div>
+              </div>
+            </div>
+
+            <!-- View 7: Drinks Screen -->
+            <div class="app-view" id="view-drinks">
+              <div class="food-list-screen">
+                <div class="food-list-header">
+                  <h2 class="section-title">Fresh Juices & Drinks</h2>
+                </div>
+                <div class="food-cards-container" id="drinksList"></div>
+              </div>
+            </div>
+
+            <!-- View 8: Desserts Screen -->
+            <div class="app-view" id="view-desserts">
+              <div class="food-list-screen">
+                <div class="food-list-header">
+                  <h2 class="section-title">Organic Desserts</h2>
+                </div>
+                <div class="food-cards-container" id="dessertsList"></div>
+              </div>
+            </div>
+
+            <!-- View 9: Reservation Screen -->
+            <div class="app-view" id="view-reservation">
+              <div class="reservation-screen">
+                <h2 class="section-title" style="margin-bottom: 20px;">Book a Table</h2>
+                <form class="reservation-form" onsubmit="handleBookTable(event)">
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-input" id="resName" required placeholder="Noor Mohamed Halith">
+                  </div>
+                  <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" class="form-input" id="resPhone" required placeholder="+91 98765 43210">
+                  </div>
+                  <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div>
+                      <label>Guests</label>
+                      <select class="form-input" id="resGuests" required>
+                        <option value="2">2 Guests</option>
+                        <option value="4" selected>4 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="8">8 Guests</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>Date</label>
+                      <input type="date" class="form-input" id="resDate" required value="2025-07-12">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Preferred Time</label>
+                    <select class="form-input" id="resTime" required>
+                      <option value="12:30 PM">12:30 PM (Lunch)</option>
+                      <option value="1:30 PM">1:30 PM (Lunch)</option>
+                      <option value="7:00 PM">7:00 PM (Dinner)</option>
+                      <option value="7:30 PM" selected>7:30 PM (Dinner)</option>
+                      <option value="8:30 PM">8:30 PM (Dinner)</option>
+                    </select>
+                  </div>
+                  
+                  <button type="submit" class="btn-primary interactive-hotspot" style="margin-top: 16px; max-width: 100%;">Book Table</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- View 10: Booking Success Screen -->
+            <div class="app-view" id="view-success">
+              <div class="success-screen">
+                <div class="success-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <h2 class="success-title">Table Reserved!</h2>
+                <p class="success-message">Your reservation and preorder have been successfully processed.</p>
+                
+                <div class="ticket-card">
+                  <div class="ticket-row">
+                    <span class="ticket-label">Booking ID</span>
+                    <span class="ticket-val ticket-id" id="ticketId">GLC-9874</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span class="ticket-label">Guest Count</span>
+                    <span class="ticket-val" id="ticketGuests">4 Guests</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span class="ticket-label">Date & Time</span>
+                    <span class="ticket-val" id="ticketDateTime">July 12, 2025 at 7:30 PM</span>
+                  </div>
+                  <div class="ticket-row">
+                    <span class="ticket-label">Preorder Sum</span>
+                    <span class="ticket-val" id="ticketPreorder">$0.00</span>
+                  </div>
+                </div>
+
+                <button class="btn-outline interactive-hotspot" style="width: 100%; border-radius: 30px;" onclick="setView('cover')">Back to Home</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Toast Notification -->
+          <div class="toast-notification" id="toastAlert">
+            <span id="toastMessage">Avocado Salad added to cart!</span>
+            <button class="toast-btn interactive-hotspot" onclick="toggleCart(true)">View Cart</button>
+          </div>
+
+          <!-- Bottom Navigation Bar inside app-canvas -->
+          <div class="app-nav-bar" id="appNavBar" style="display: none;">
+            <div class="nav-item active interactive-hotspot" id="nav-categories" onclick="setView('categories')">
+              <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+              <span>Menu</span>
+            </div>
+            <div class="nav-item interactive-hotspot" id="nav-reservation" onclick="setView('reservation')">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+              <span>Reserve</span>
+            </div>
+            <div class="nav-item interactive-hotspot" id="nav-about" onclick="setView('about')">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              <span>Story</span>
+            </div>
+          </div>
+
+          <!-- Cart Slide-up Drawer -->
+          <div class="cart-overlay-bg" id="cartOverlayBg" onclick="toggleCart(false)"></div>
+          <div class="cart-drawer" id="cartDrawer">
+            <div class="cart-header">
+              <h3 class="cart-title">Your Order Summary</h3>
+              <button class="btn-icon" onclick="toggleCart(false)">✕</button>
+            </div>
+            <div class="cart-items-list" id="cartList">
+              <div style="text-align: center; color: var(--color-text-muted); margin-top: 40px; font-size: 14px;">Your cart is empty. Add fresh items from the menu!</div>
+            </div>
+            <div class="cart-summary">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Tax & Service</span>
+                <span id="summaryTax">$0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span id="summaryTotal">$0.00</span>
+              </div>
+            </div>
+            <button class="btn-secondary interactive-hotspot" style="width: 100%; border-radius: 30px;" onclick="checkoutFromCart()">Proceed to Reserve</button>
+          </div>
+
+          <!-- Confetti Canvas overlay -->
+          <canvas id="confettiCanvas" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index: 150;"></canvas>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // App Food Data
+    const FOOD_ITEMS = {
+      salads: [
+        { id: 's1', name: 'Organic Avocado Quinoa', calories: '320 kcal', desc: 'Vibrant fresh avocado with red quinoa, organic spinach, and lemon vinaigrette.', price: 12.90, veg: true, image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=200' },
+        { id: 's2', name: 'Greek Feta Garden Salad', calories: '280 kcal', desc: 'Classic cucumber slices, Kalamata olives, premium Greek feta, and extra virgin olive oil.', price: 11.50, veg: true, image: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&q=80&w=200' },
+        { id: 's3', name: 'Smoked Salmon Caesar', calories: '410 kcal', desc: 'Cold-smoked wild salmon over crispy romaine lettuce, Parmesan flakes, and house Caesar dressing.', price: 15.90, veg: false, image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=200' }
+      ],
+      burgers: [
+        { id: 'b1', name: 'GreenLife Avocado Burger', calories: '580 kcal', desc: 'Plant-based patty with fresh avocado mash, organic microgreens, and vegan spicy mayo on whole grain bun.', price: 14.50, veg: true, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=200' },
+        { id: 'b2', name: 'Gourmet Organic Beef Burger', calories: '640 kcal', desc: '100% grass-fed beef patty with melted organic Cheddar, wild arugula, and balsamic onion confit.', price: 16.90, veg: false, image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&q=80&w=200' }
+      ],
+      pizza: [
+        { id: 'p1', name: 'Rustic Pesto & Mozzarella', calories: '720 kcal', desc: 'Wood-fired thin sourdough with organic basil pesto, fresh heirloom tomatoes, and buffalo mozzarella.', price: 15.50, veg: true, image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=200' },
+        { id: 'p2', name: 'Wild Mushroom Truffle', calories: '780 kcal', desc: 'White sourdough pizza topped with roasted shiitake, button mushrooms, fresh rosemary, and truffle glaze.', price: 18.90, veg: true, image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&q=80&w=200' }
+      ],
+      drinks: [
+        { id: 'd1', name: 'Detox Cold-Pressed Juice', calories: '90 kcal', desc: 'Cold-pressed kale, organic celery, green apple, ginger, and organic lime juice.', price: 7.50, veg: true, image: 'https://images.unsplash.com/photo-1610970881699-44a5587caa9a?auto=format&fit=crop&q=80&w=200' },
+        { id: 'd2', name: 'Tropical Mango Smoothie', calories: '180 kcal', desc: 'Fresh local mango blended with organic coconut water and Greek yogurt.', price: 8.50, veg: true, image: 'https://images.unsplash.com/photo-1553530979-7ee52a2670c4?auto=format&fit=crop&q=80&w=200' }
+      ],
+      desserts: [
+        { id: 'e1', name: 'Matcha Chia Seed Pudding', calories: '210 kcal', desc: 'Organic chia seeds soaked in almond milk, layered with ceremonial Japanese matcha and fresh berries.', price: 8.90, veg: true, image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=200' },
+        { id: 'e2', name: 'Raw Avocado Chocolate Tart', calories: '240 kcal', desc: 'Velvety dark chocolate avocado mousse inside an almond-walnut crust. Gluten-free.', price: 9.50, veg: true, image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=200' }
+      ]
+    };
+
+    // State Variables
+    let currentView = 'cover';
+    let prevViewsStack = [];
+    let cart = [];
+    let activeHotspots = true;
+
+    // Initialize lists
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hotspot toggle listener
+      const toggle = document.getElementById('hotspotToggle');
+      toggle.addEventListener('change', (e) => {
+        activeHotspots = e.target.checked;
+        const frame = document.getElementById('deviceFrame');
+        if (activeHotspots) {
+          frame.classList.add('hotspot-active');
+        } else {
+          frame.classList.remove('hotspot-active');
+        }
+      });
+
+      // Populate list containers
+      Object.keys(FOOD_ITEMS).forEach(category => {
+        const container = document.getElementById(`${category}List`);
+        if (!container) return;
+
+        FOOD_ITEMS[category].forEach(item => {
+          const cardHtml = `
+            <div class="food-card">
+              <div class="food-card-img">
+                <img src="${item.image}" alt="${item.name}">
+              </div>
+              <div class="food-card-details">
+                <div class="food-card-top">
+                  <div>
+                    <div class="food-title">${item.name}</div>
+                    <div class="food-meta">
+                      <span>${item.calories}</span>
+                      <span>★ 4.8</span>
+                    </div>
+                  </div>
+                  <div class="badge-veg-nonveg ${item.veg ? 'veg' : 'non-veg'}"></div>
+                </div>
+                <div class="food-card-bottom">
+                  <div class="food-price">$${item.price.toFixed(2)}</div>
+                  <button class="btn-add-food interactive-hotspot" onclick="addToCart('${item.id}', '${item.name}', ${item.price})">+</button>
+                </div>
+              </div>
+            </div>
+          `;
+          container.innerHTML += cardHtml;
+        });
+      });
+    });
+
+    // Navigation state machine
+    function setView(viewId) {
+      if (currentView !== viewId) {
+        prevViewsStack.push(currentView);
+      }
+      currentView = viewId;
+
+      // Hide all views, display active
+      document.querySelectorAll('.app-view').forEach(view => {
+        view.classList.remove('active');
+      });
+      document.getElementById(`view-${viewId}`).classList.add('active');
+
+      // Update simulation button styles
+      document.querySelectorAll('.flow-step-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      const btns = document.querySelectorAll('.flow-step-btn');
+      const indexMap = {
+        'cover': 0, 'about': 1, 'categories': 2, 'salads': 3,
+        'burgers': 4, 'pizza': 5, 'drinks': 6, 'desserts': 7,
+        'reservation': 8, 'success': 9
+      };
+      if (indexMap[viewId] !== undefined) {
+        btns[indexMap[viewId]].classList.add('active');
+      }
+
+      // Toggle common layout details based on screen state
+      const header = document.getElementById('appHeader');
+      const navbar = document.getElementById('appNavBar');
+      if (viewId === 'cover') {
+        header.style.display = 'none';
+        navbar.style.display = 'none';
+      } else {
+        header.style.display = 'flex';
+        navbar.style.display = 'flex';
+      }
+
+      // Highlight active nav item
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      if (viewId === 'reservation') {
+        document.getElementById('nav-reservation').classList.add('active');
+      } else if (viewId === 'about') {
+        document.getElementById('nav-about').classList.add('active');
+      } else if (['categories', 'salads', 'burgers', 'pizza', 'drinks', 'desserts'].includes(viewId)) {
+        document.getElementById('nav-categories').classList.add('active');
+      }
+
+      // Trigger Confetti logic on success
+      if (viewId === 'success') {
+        startConfetti();
+        updateTicketDetails();
+      }
+    }
+
+    function goBack() {
+      if (prevViewsStack.length > 0) {
+        const prev = prevViewsStack.pop();
+        setView(prev);
+        prevViewsStack.pop(); // remove duplicate setView push
+      } else {
+        setView('cover');
+      }
+    }
+
+    // In-memory cart manager
+    function addToCart(id, name, price) {
+      const existing = cart.find(x => x.id === id);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ id, name, price, qty: 1 });
+      }
+      updateCartDisplay();
+
+      // Trigger Toast notification
+      const toast = document.getElementById('toastAlert');
+      document.getElementById('toastMessage').innerText = `${name} added to cart!`;
+      toast.classList.add('active');
+      setTimeout(() => {
+        toast.classList.remove('active');
+      }, 3000);
+    }
+
+    function updateCartDisplay() {
+      const badge = document.getElementById('cartCountBadge');
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      if (totalCount > 0) {
+        badge.innerText = totalCount;
+        badge.style.display = 'flex';
+      } else {
+        badge.style.display = 'none';
+      }
+
+      // Populate cart list
+      const container = document.getElementById('cartList');
+      if (cart.length === 0) {
+        container.innerHTML = `<div style="text-align: center; color: var(--color-text-muted); margin-top: 40px; font-size: 14px;">Your cart is empty. Add fresh items from the menu!</div>`;
+      } else {
+        container.innerHTML = '';
+        cart.forEach(item => {
+          container.innerHTML += `
+            <div class="cart-item">
+              <span class="cart-item-name">${item.name}</span>
+              <div class="cart-item-controls">
+                <button class="cart-qty-btn interactive-hotspot" onclick="adjustQty('${item.id}', -1)">-</button>
+                <span>${item.qty}</span>
+                <button class="cart-qty-btn interactive-hotspot" onclick="adjustQty('${item.id}', 1)">+</button>
+                <span style="font-weight: 600; width: 60px; text-align: right;">$${(item.price * item.qty).toFixed(2)}</span>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      // Calculations
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const tax = subtotal * 0.12; // 12% service/VAT
+      const total = subtotal + tax;
+
+      document.getElementById('summarySubtotal').innerText = `$${subtotal.toFixed(2)}`;
+      document.getElementById('summaryTax').innerText = `$${tax.toFixed(2)}`;
+      document.getElementById('summaryTotal').innerText = `$${total.toFixed(2)}`;
+    }
+
+    function adjustQty(id, change) {
+      const item = cart.find(x => x.id === id);
+      if (!item) return;
+      item.qty += change;
+      if (item.qty <= 0) {
+        cart = cart.filter(x => x.id !== id);
+      }
+      updateCartDisplay();
+    }
+
+    function toggleCart(forceOpen) {
+      const drawer = document.getElementById('cartDrawer');
+      const bg = document.getElementById('cartOverlayBg');
+      const isOpen = drawer.classList.contains('active');
+
+      if (forceOpen === true || (forceOpen === undefined && !isOpen)) {
+        drawer.classList.add('active');
+        bg.classList.add('active');
+      } else {
+        drawer.classList.remove('active');
+        bg.classList.remove('active');
+      }
+    }
+
+    function checkoutFromCart() {
+      toggleCart(false);
+      setView('reservation');
+    }
+
+    // Reservation handler
+    let lastBookingDetails = {};
+    function handleBookTable(event) {
+      event.preventDefault();
+      const name = document.getElementById('resName').value;
+      const guests = document.getElementById('resGuests').value;
+      const date = document.getElementById('resDate').value;
+      const time = document.getElementById('resTime').value;
+
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const tax = subtotal * 0.12;
+      const total = subtotal + tax;
+
+      lastBookingDetails = {
+        id: `GLC-${Math.floor(1000 + Math.random() * 9000)}`,
+        guests: `${guests} Guests`,
+        dateTime: `${formatDate(date)} at ${time}`,
+        preorder: `$${total.toFixed(2)}`
+      };
+
+      // Clear cart
+      cart = [];
+      updateCartDisplay();
+
+      setView('success');
+    }
+
+    function updateTicketDetails() {
+      if (lastBookingDetails.id) {
+        document.getElementById('ticketId').innerText = lastBookingDetails.id;
+        document.getElementById('ticketGuests').innerText = lastBookingDetails.guests;
+        document.getElementById('ticketDateTime').innerText = lastBookingDetails.dateTime;
+        document.getElementById('ticketPreorder').innerText = lastBookingDetails.preorder;
+      }
+    }
+
+    function formatDate(dateStr) {
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+
+    // Confetti Physics Animation
+    let confettiActive = false;
+    function startConfetti() {
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+
+      const colors = ['#2E7D32', '#81C784', '#FF9800', '#FFF', '#4CAF50'];
+      const particles = [];
+
+      for(let i=0; i<60; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * -50,
+          r: Math.random() * 6 + 4,
+          d: Math.random() * canvas.height,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          tilt: Math.random() * 10 - 5,
+          tiltAngleIncremental: Math.random() * 0.07 + 0.02,
+          tiltAngle: 0
+        });
+      }
+
+      confettiActive = true;
+      function draw() {
+        if(!confettiActive) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach((p, idx) => {
+          p.tiltAngle += p.tiltAngleIncremental;
+          p.y += (Math.cos(p.tiltAngle) + 3 + p.r / 2) / 2;
+          p.x += Math.sin(p.tiltAngle);
+          p.tilt = Math.sin(p.tiltAngle - idx/3) * 15;
+
+          ctx.beginPath();
+          ctx.lineWidth = p.r;
+          ctx.strokeStyle = p.color;
+          ctx.moveTo(p.x + p.tilt + p.r/2, p.y);
+          ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r/2);
+          ctx.stroke();
+
+          // Reset particle if falls out
+          if (p.y > canvas.height) {
+            particles[idx] = {
+              x: Math.random() * canvas.width,
+              y: -20,
+              r: p.r,
+              d: p.d,
+              color: p.color,
+              tilt: p.tilt,
+              tiltAngleIncremental: p.tiltAngleIncremental,
+              tiltAngle: 0
+            };
+          }
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+      setTimeout(() => { confettiActive = false; ctx.clearRect(0,0,canvas.width,canvas.height); }, 4000);
+    }
+  </script>
+</body>
+</html>

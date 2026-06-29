@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color:#FFF8E7;">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+      .slide-title { font-family: 'Poppins', sans-serif; font-weight: 700; fill: #2E7D32; font-size: 36px; }
+      .slide-subtitle { font-family: 'Poppins', sans-serif; font-weight: 600; fill: #FF9800; font-size: 16px; letter-spacing: 2px; text-transform: uppercase; }
+      .slide-body { font-family: 'Inter', sans-serif; font-weight: 400; fill: #263238; font-size: 15px; }
+      .slide-body-bold { font-family: 'Inter', sans-serif; font-weight: 600; fill: #263238; font-size: 15px; }
+      .slide-muted { fill: #546E7A; font-size: 13px; }
+      .phone-frame-bg { fill: #FFF8E7; }
+      .accent-btn-fill { fill: url(#orange-grad); }
+      .green-btn-fill { fill: url(#green-grad); }
+      .white-text { fill: #FFFFFF; }
+      .drop-shadow { filter: drop-shadow(0px 10px 30px rgba(46,125,50,0.06)); }
+    </style>
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9800" />
+      <stop offset="100%" stop-color="#F57C00" />
+    </linearGradient>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E7D32" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+    <clipPath id="iphone-screen">
+      <rect x="0" y="0" width="375" height="812" rx="40" />
+    </clipPath>
+  </defs>
+
+  <!-- Outer slide deck background card -->
+  <rect x="0" y="0" width="1440" height="900" rx="32" fill="#FFFFFF" />
+  
+  <!-- Content -->
+  
+  <g transform="translate(80, 120)">
+    <text x="0" y="40" class="slide-subtitle">03 — MENU SELECTION</text>
+    <text x="0" y="90" class="slide-title">Interactive Categories Grid</text>
+    <text x="0" y="150" class="slide-body" fill="#546E7A">
+      <tspan x="0" dy="0">Category selector screens feature large visual food imagery cards</tspan>
+      <tspan x="0" dy="24">enabling fast search discovery. The 2-column card layout utilizes standard</tspan>
+      <tspan x="0" dy="24">8-point grid card sizing for a balanced layout hierarchy.</tspan>
+    </text>
+  </g>
+  
+    <g transform="translate(920, 50)" class="drop-shadow">
+      <!-- Phone body frame shell -->
+      <rect x="-8" y="-8" width="391" height="828" rx="48" fill="#263238" />
+      <rect x="0" y="0" width="375" height="812" rx="40" fill="#FFF8E7" />
+      
+      <!-- Clipped screen content -->
+      <g clip-path="url(#iphone-screen)">
+        
+    <text x="20" y="90" font-size="20" class="title-pop">What would you like?</text>
+    <g transform="translate(20, 120)">
+      <rect x="0" y="0" width="160" height="140" rx="16" fill="#FFFFFF" class="shadow-filter" />
+      <rect x="0" y="0" width="160" height="90" rx="16" fill="#C8E6C9" />
+      <text x="80" y="118" text-anchor="middle" font-size="12" class="body-int-semi">Healthy Salads</text>
+    </g>
+    <g transform="translate(195, 120)">
+      <rect x="0" y="0" width="160" height="140" rx="16" fill="#FFFFFF" class="shadow-filter" />
+      <rect x="0" y="0" width="160" height="90" rx="16" fill="#FFE0B2" />
+      <text x="80" y="118" text-anchor="middle" font-size="12" class="body-int-semi">Gourmet Burgers</text>
+    </g>
+    <g transform="translate(20, 280)">
+      <rect x="0" y="0" width="160" height="140" rx="16" fill="#FFFFFF" class="shadow-filter" />
+      <rect x="0" y="0" width="160" height="90" rx="16" fill="#FFCCBC" />
+      <text x="80" y="118" text-anchor="middle" font-size="12" class="body-int-semi">Wood-Fired Pizza</text>
+    </g>
+    <g transform="translate(195, 280)">
+      <rect x="0" y="0" width="160" height="140" rx="16" fill="#FFFFFF" class="shadow-filter" />
+      <rect x="0" y="0" width="160" height="90" rx="16" fill="#E1F5FE" />
+      <text x="80" y="118" text-anchor="middle" font-size="12" class="body-int-semi">Fresh Juices</text>
+    </g>
+  
+        
+        <!-- Status Bar info -->
+        <text x="36" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#263238">9:41</text>
+        <circle cx="330" cy="18" r="2.5" fill="#263238" />
+        <circle cx="340" cy="18" r="4" fill="#263238" opacity="0.3" />
+        
+        <!-- Notch -->
+        <rect x="112" y="0" width="150" height="28" rx="14" fill="#263238" />
+        
+        <!-- Bottom bar indicator -->
+        <rect x="120" y="798" width="135" height="4" rx="2" fill="#263238" opacity="0.3" />
+      </g>
+    </g>
+  
+
+  
+  <!-- Slide footer bar metadata -->
+  <g transform="translate(80, 840)">
+    <line x1="0" y1="0" x2="1280" y2="0" stroke="#E8F5E9" stroke-width="2" />
+    <text x="0" y="24" font-family="'Poppins', sans-serif" font-weight="600" font-size="12" fill="#FF9800">GREENLIFE CAFÉ</text>
+    <text x="140" y="24" font-family="'Inter', sans-serif" font-size="12" fill="#546E7A">Noor Mohamed Halith — UI/UX Portfolio Case Study</text>
+    <text x="1280" y="24" text-anchor="end" font-family="'Poppins', sans-serif" font-weight="700" font-size="12" fill="#2E7D32">PAGE 03 OF 16</text>
+  </g>
+</svg>

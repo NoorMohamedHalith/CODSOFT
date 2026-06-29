@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color:#FFF8E7;">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+      .title-pop { font-family: 'Poppins', sans-serif; font-weight: 700; fill: #2E7D32; }
+      .body-int { font-family: 'Inter', sans-serif; font-weight: 400; fill: #263238; }
+      .body-int-med { font-family: 'Inter', sans-serif; font-weight: 500; fill: #263238; }
+      .body-int-semi { font-family: 'Inter', sans-serif; font-weight: 600; fill: #263238; }
+      .muted { fill: #546E7A; }
+      .white-text { fill: #FFFFFF; }
+      .accent-text { fill: #FF9800; }
+      .shadow-filter { filter: drop-shadow(0px 8px 24px rgba(46, 125, 50, 0.08)); }
+      .shadow-medium { filter: drop-shadow(0px 12px 32px rgba(46, 125, 50, 0.12)); }
+    </style>
+    <clipPath id="screen-clip">
+      <rect x="0" y="0" width="375" height="812" rx="40" />
+    </clipPath>
+    <linearGradient id="gradient-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9800" />
+      <stop offset="100%" stop-color="#F57C00" />
+    </linearGradient>
+    <linearGradient id="gradient-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E7D32" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+  </defs>
+
+  <text x="30" y="50" font-size="22" class="title-pop">GreenLife Brand Assets &amp; Icons</text>
+  
+  <!-- Vector Brand Logo -->
+  <g transform="translate(30, 100)">
+    <rect x="0" y="0" width="120" height="120" rx="24" fill="#FFFFFF" class="shadow-filter" />
+    <path d="M60 25 C45 25 35 37 35 55 C35 70 45 85 60 95 C75 85 85 70 85 55 C85 37 75 25 60 25 Z" fill="#2E7D32" />
+    <circle cx="60" cy="50" r="8" fill="#FF9800" />
+    <text x="60" y="140" text-anchor="middle" font-size="14" class="title-pop">GreenLife Logo</text>
+  </g>
+  
+  <!-- Shared Icons list -->
+  <g transform="translate(220, 100)">
+    <text x="0" y="-10" font-size="12" class="body-int muted">Interactive UI Icons</text>
+    
+    <!-- Heart icon -->
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="40" height="40" rx="8" fill="#FFFFFF" class="shadow-filter" />
+      <path d="M20 32 L18.55 30.68 C13.4 26.01 10 22.93 10 19.5 C10 16.74 12.16 14.58 14.92 14.58 C16.48 14.58 17.97 15.3 19 16.42 C20.03 15.3 21.52 14.58 23.08 14.58 C25.84 14.58 28 16.74 28 19.5 C28 22.93 24.6 26.01 19.45 30.68 L20 32 Z" fill="#E53935" />
+      <text x="50" y="24" font-size="12" class="body-int-semi">Favorite</text>
+    </g>
+
+    <!-- Star icon -->
+    <g transform="translate(0, 70)">
+      <rect x="0" y="0" width="40" height="40" rx="8" fill="#FFFFFF" class="shadow-filter" />
+      <path d="M20 12 L22.47 17.51 L28.5 18.15 L23.97 22.18 L25.24 28.1 L20 25.04 L14.76 28.1 L16.03 22.18 L11.5 18.15 L17.53 17.51 Z" fill="#FF9800" />
+      <text x="50" y="24" font-size="12" class="body-int-semi">Star Review</text>
+    </g>
+  </g>
+</svg>

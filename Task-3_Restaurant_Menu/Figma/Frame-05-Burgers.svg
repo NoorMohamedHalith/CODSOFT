@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg" style="background-color:#000000; border-radius:48px;">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+      .title-pop { font-family: 'Poppins', sans-serif; font-weight: 700; fill: #2E7D32; }
+      .body-int { font-family: 'Inter', sans-serif; font-weight: 400; fill: #263238; }
+      .body-int-med { font-family: 'Inter', sans-serif; font-weight: 500; fill: #263238; }
+      .body-int-semi { font-family: 'Inter', sans-serif; font-weight: 600; fill: #263238; }
+      .muted { fill: #546E7A; }
+      .white-text { fill: #FFFFFF; }
+      .accent-text { fill: #FF9800; }
+      .shadow-filter { filter: drop-shadow(0px 8px 24px rgba(46, 125, 50, 0.08)); }
+      .shadow-medium { filter: drop-shadow(0px 12px 32px rgba(46, 125, 50, 0.12)); }
+    </style>
+    <clipPath id="screen-clip">
+      <rect x="0" y="0" width="375" height="812" rx="40" />
+    </clipPath>
+    <linearGradient id="gradient-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9800" />
+      <stop offset="100%" stop-color="#F57C00" />
+    </linearGradient>
+    <linearGradient id="gradient-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E7D32" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Device Mockup Frame -->
+  <rect x="0" y="0" width="375" height="812" rx="40" fill="#FFF8E7" />
+  
+  <!-- Content Area clipped for rounded mobile corners -->
+  <g clip-path="url(#screen-clip)">
+    
+  <g id="Burgers_Screen">
+    <text x="20" y="100" font-size="20" class="title-pop">Gourmet Burgers</text>
+    
+    <g transform="translate(20, 130)">
+      <rect x="0" y="0" width="335" height="130" rx="20" fill="#FFFFFF" class="shadow-filter" />
+      <rect x="0" y="0" width="120" height="130" rx="20" fill="#FFE0B2" />
+      <text x="60" y="70" text-anchor="middle" font-size="12" class="body-int-semi" fill="#E65100">Burger Image</text>
+      
+      <text x="136" y="32" font-size="14" class="body-int-semi">GreenLife Avocado Burger</text>
+      <text x="136" y="50" font-size="11" class="body-int muted">580 kcal • ★ 4.9 • Veg</text>
+      <text x="136" y="75" font-size="11" class="body-int muted">Plant-based patty with avocado</text>
+      
+      <text x="136" y="108" font-size="16" class="title-pop">$14.50</text>
+      <g transform="translate(285, 82)">
+        <circle cx="18" cy="18" r="18" fill="#2E7D32" />
+        <path d="M18 10 L18 26 M10 18 L26 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+    </g>
+  </g>
+
+    
+    <!-- Top Notch -->
+    <rect x="112" y="0" width="150" height="30" rx="15" fill="#000000" />
+    
+    <!-- Status Bar Icons -->
+    <text x="36" y="20" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#263238">9:41</text>
+    <path d="M320 12h12v12h-12z" fill="#263238" opacity="0.1" /> <!-- Battery placeholder -->
+    <circle cx="340" cy="18" r="3" fill="#263238" />
+    
+    <!-- Bottom Indicator -->
+    <rect x="120" y="798" width="135" height="5" rx="2.5" fill="#263238" opacity="0.3" />
+  </g>
+</svg>
