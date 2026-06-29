@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    <linearGradient id="ds-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="btn-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#F8FAFC"/>
+
+  <!-- Header -->
+  <rect width="1000" height="70" fill="url(#ds-grad)"/>
+  <text x="30" y="44" font-family="Inter,sans-serif" font-size="22" fill="white" font-weight="800">FlowSphere — Design System</text>
+  <text x="700" y="44" font-family="Inter,sans-serif" font-size="13" fill="rgba(255,255,255,0.7)">CODSOFT UI/UX Task 2 · Email Template</text>
+
+  <!-- ── Section: Buttons ── -->
+  <text x="30" y="110" font-family="Inter,sans-serif" font-size="13" fill="#6366F1" font-weight="700">BUTTONS</text>
+  <!-- Primary Button -->
+  <rect x="30" y="120" width="160" height="44" rx="10" fill="url(#btn-grad)"/>
+  <text x="90" y="148" font-family="Inter,sans-serif" font-size="14" fill="white" font-weight="600" text-anchor="middle">Get Started Free</text>
+  <!-- Secondary Button -->
+  <rect x="210" y="120" width="160" height="44" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+  <text x="290" y="148" font-family="Inter,sans-serif" font-size="14" fill="#6366F1" font-weight="600" text-anchor="middle">Learn More</text>
+  <!-- Offer Button -->
+  <rect x="390" y="120" width="160" height="44" rx="10" fill="white"/>
+  <text x="470" y="148" font-family="Inter,sans-serif" font-size="14" fill="#6366F1" font-weight="700" text-anchor="middle">Claim Now</text>
+  <!-- Ghost Button -->
+  <rect x="570" y="120" width="140" height="44" rx="10" fill="transparent" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="640" y="148" font-family="Inter,sans-serif" font-size="14" fill="#6B7280" font-weight="500" text-anchor="middle">Cancel</text>
+
+  <!-- ── Section: Feature Cards ── -->
+  <text x="30" y="200" font-family="Inter,sans-serif" font-size="13" fill="#6366F1" font-weight="700">FEATURE CARDS</text>
+  <!-- Card 1 -->
+  <rect x="30" y="210" width="200" height="140" rx="14" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="52" y="228" width="52" height="52" rx="10" fill="#EEF2FF"/>
+  <rect x="52" y="294" width="100" height="12" rx="4" fill="#111827" opacity="0.7"/>
+  <rect x="52" y="312" width="150" height="8" rx="4" fill="#6B7280" opacity="0.35"/>
+  <rect x="52" y="324" width="130" height="8" rx="4" fill="#6B7280" opacity="0.25"/>
+  <!-- Card 2 -->
+  <rect x="250" y="210" width="200" height="140" rx="14" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="272" y="228" width="52" height="52" rx="10" fill="#F5F3FF"/>
+  <rect x="272" y="294" width="90" height="12" rx="4" fill="#111827" opacity="0.7"/>
+  <rect x="272" y="312" width="150" height="8" rx="4" fill="#6B7280" opacity="0.35"/>
+  <rect x="272" y="324" width="120" height="8" rx="4" fill="#6B7280" opacity="0.25"/>
+  <!-- Card 3 -->
+  <rect x="470" y="210" width="200" height="140" rx="14" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="492" y="228" width="52" height="52" rx="10" fill="#ECFDF5"/>
+  <rect x="492" y="294" width="120" height="12" rx="4" fill="#111827" opacity="0.7"/>
+  <rect x="492" y="312" width="150" height="8" rx="4" fill="#6B7280" opacity="0.35"/>
+  <rect x="492" y="324" width="140" height="8" rx="4" fill="#6B7280" opacity="0.25"/>
+
+  <!-- ── Section: Offer Banner (mini) ── -->
+  <text x="30" y="390" font-family="Inter,sans-serif" font-size="13" fill="#6366F1" font-weight="700">OFFER BANNER</text>
+  <rect x="30" y="400" width="400" height="100" rx="16" fill="url(#ds-grad)"/>
+  <text x="60" y="434" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.75)" font-weight="600">✨ LIMITED TIME OFFER</text>
+  <text x="60" y="458" font-family="Inter,sans-serif" font-size="24" fill="white" font-weight="900">30 Days Premium Free</text>
+  <rect x="290" y="422" width="120" height="36" rx="8" fill="white"/>
+  <text x="350" y="446" font-family="Inter,sans-serif" font-size="13" fill="#6366F1" font-weight="700" text-anchor="middle">Claim Now</text>
+
+  <!-- ── Section: Testimonial Card ── -->
+  <text x="460" y="390" font-family="Inter,sans-serif" font-size="13" fill="#6366F1" font-weight="700">TESTIMONIAL CARD</text>
+  <rect x="460" y="400" width="280" height="140" rx="14" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <!-- Stars -->
+  <text x="476" y="426" font-family="serif" font-size="14" fill="#F59E0B">★★★★★</text>
+  <rect x="476" y="436" width="240" height="7" rx="3" fill="#6B7280" opacity="0.25"/>
+  <rect x="476" y="448" width="220" height="7" rx="3" fill="#6B7280" opacity="0.20"/>
+  <rect x="476" y="460" width="180" height="7" rx="3" fill="#6B7280" opacity="0.15"/>
+  <!-- Author -->
+  <circle cx="490" cy="498" r="16" fill="#EEF2FF"/>
+  <circle cx="490" cy="494" r="6" fill="#6366F1"/>
+  <rect x="512" y="490" width="80" height="8" rx="4" fill="#111827" opacity="0.7"/>
+  <rect x="512" y="504" width="120" height="6" rx="3" fill="#6B7280" opacity="0.35"/>
+
+  <!-- ── Section: Color Swatches (mini) ── -->
+  <text x="30" y="540" font-family="Inter,sans-serif" font-size="13" fill="#6366F1" font-weight="700">COLOR TOKENS</text>
+  <rect x="30" y="552" width="60" height="30" rx="6" fill="#6366F1"/>
+  <rect x="100" y="552" width="60" height="30" rx="6" fill="#8B5CF6"/>
+  <rect x="170" y="552" width="60" height="30" rx="6" fill="#22C55E"/>
+  <rect x="240" y="552" width="60" height="30" rx="6" fill="#111827"/>
+  <rect x="310" y="552" width="60" height="30" rx="6" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="380" y="552" width="60" height="30" rx="6" fill="#6B7280"/>
+  <text x="55" y="600" font-family="Inter,sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Primary</text>
+  <text x="125" y="600" font-family="Inter,sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Secondary</text>
+  <text x="195" y="600" font-family="Inter,sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Success</text>
+  <text x="265" y="600" font-family="Inter,sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Text</text>
+  <text x="335" y="600" font-family="Inter,sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Surface</text>
+  <text x="405" y="600" font-family="Inter,sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Gray</text>
+
+  <!-- Footer label -->
+  <text x="500" y="682" font-family="Inter,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">CODSOFT UI/UX Internship Task 2 · Designed by Noor Mohamed Halith · 2025</text>
+  
+</svg>

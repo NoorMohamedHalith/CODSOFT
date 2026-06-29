@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="760" height="510" viewBox="0 0 760 510" fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    <linearGradient id="ty-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="50" fill="url(#ty-grad)"/>
+  <text x="24" y="32" font-family="Inter,sans-serif" font-size="18" fill="white" font-weight="700">FlowSphere — Typography Scale</text>
+  <text x="620" y="32" font-family="Inter,sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">Inter Font Family</text>
+  <!-- Column headers -->
+  <rect x="20" y="56" width="720" height="20" fill="#EEF2FF"/>
+  <text x="36" y="70" font-family="Inter,sans-serif" font-size="10" fill="#6366F1" font-weight="700">STYLE</text>
+  <text x="200" y="70" font-family="Inter,sans-serif" font-size="10" fill="#6366F1" font-weight="700">SPECS</text>
+  <text x="320" y="70" font-family="Inter,sans-serif" font-size="10" fill="#6366F1" font-weight="700">SAMPLE TEXT</text>
+  
+    <rect x="20" y="80" width="720" height="52" rx="8" fill="#F8FAFC"/>
+    <text x="36" y="98" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">H1 — Hero Title</text>
+    <text x="36" y="116" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">36px  ·  Inter 800 ExtraBold</text>
+    <text x="320" y="112" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">Welcome to FlowSphere</text>
+    
+
+    <rect x="20" y="140" width="720" height="52" rx="8" fill="white"/>
+    <text x="36" y="158" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">H2 — Section Title</text>
+    <text x="36" y="176" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">26px  ·  Inter 700 Bold</text>
+    <text x="320" y="172" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">Powerful Features</text>
+    
+
+    <rect x="20" y="200" width="720" height="52" rx="8" fill="#F8FAFC"/>
+    <text x="36" y="218" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">H3 — Card Title</text>
+    <text x="36" y="236" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">18px  ·  Inter 700 Bold</text>
+    <text x="320" y="232" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">Smart Task Management</text>
+    
+
+    <rect x="20" y="260" width="720" height="52" rx="8" fill="white"/>
+    <text x="36" y="278" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">Body — Regular</text>
+    <text x="36" y="296" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">16px  ·  Inter 400 Regular</text>
+    <text x="320" y="292" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">Organize your work smarter every day.</text>
+    
+
+    <rect x="20" y="320" width="720" height="52" rx="8" fill="#F8FAFC"/>
+    <text x="36" y="338" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">Small — Secondary</text>
+    <text x="36" y="356" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">14px  ·  Inter 500 Medium</text>
+    <text x="320" y="352" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">Real-time collaboration with your team.</text>
+    
+
+    <rect x="20" y="380" width="720" height="52" rx="8" fill="white"/>
+    <text x="36" y="398" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">Caption — Metadata</text>
+    <text x="36" y="416" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">12px  ·  Inter 600 SemiBold</text>
+    <text x="320" y="412" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">EVERYTHING YOU NEED — FEATURES</text>
+    
+
+    <rect x="20" y="440" width="720" height="52" rx="8" fill="#F8FAFC"/>
+    <text x="36" y="458" font-family="Inter,sans-serif" font-size="11" fill="#6366F1" font-weight="600">Button — CTA</text>
+    <text x="36" y="476" font-family="Inter,sans-serif" font-size="10" fill="#6B7280">16px  ·  Inter 600 SemiBold</text>
+    <text x="320" y="472" font-family="Inter,sans-serif" font-size="13" fill="#111827" font-weight="500">Get Started Free</text>
+    
+  
+</svg>

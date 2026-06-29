@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="720" viewBox="0 0 1440 720" fill="none"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Page 5 — User Journey Map</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, sans-serif; }
+    </style>
+    <linearGradient id="grad-brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F5F3FF"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(99,102,241,0.08)"/>
+    </filter>
+    <filter id="shadow-modal">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="720" fill="#FFFFFF"/>
+  
+  <!-- Page Header -->
+  <rect width="1440" height="80" fill="#FFFFFF"/>
+  <line x1="0" y1="79.5" x2="1440" y2="79.5" stroke="#E5E7EB" stroke-width="1"/>
+  <!-- Logo -->
+  <rect x="40" y="24" width="32" height="32" rx="8" fill="url(#grad-brand)"/>
+  <path d="M56 30l-4 2v4a4 4 0 008 0v-4l-4-2z" fill="white"/>
+  <text x="82" y="46" font-size="16" font-weight="800" fill="url(#grad-brand)">FlowSphere</text>
+  <text x="180" y="45" font-size="14" font-weight="400" fill="#6B7280" opacity="0.5">|</text>
+  <text x="196" y="46" font-size="15" font-weight="700" fill="#111827">User Journey Mapping</text>
+  <!-- Page number -->
+  <rect x="1340" y="24" width="60" height="32" rx="16" fill="#EEF2FF"/>
+  <text x="1370" y="45" font-size="12" font-weight="700" fill="#6366F1" text-anchor="middle">PAGE 05</text>
+  
+
+  <!-- Table Columns -->
+  <g transform="translate(80, 120)">
+    <!-- Headers -->
+    <rect width="1280" height="40" rx="8" fill="#F8FAFC"/>
+    <text x="20"  y="25" font-size="11" font-weight="800" fill="#6B7280">STAGE</text>
+    <text x="180" y="25" font-size="11" font-weight="800" fill="#6B7280">AWARENESS</text>
+    <text x="420" y="25" font-size="11" font-weight="800" fill="#6B7280">CONSIDERATION</text>
+    <text x="680" y="25" font-size="11" font-weight="800" fill="#6B7280">ONBOARDING</text>
+    <text x="940" y="25" font-size="11" font-weight="800" fill="#6B7280">TRIAL CLAIM</text>
+    <text x="1160" y="25" font-size="11" font-weight="800" fill="#6B7280">ADVOCACY</text>
+
+    <!-- Row 1: Actions -->
+    <g transform="translate(0, 60)">
+      <text x="20" y="40" font-size="12" font-weight="700" fill="#111827">Actions</text>
+      <text x="180" y="40" font-size="12" fill="#111827">Signs up for beta</text>
+      <text x="420" y="40" font-size="12" fill="#111827">Opens welcome email</text>
+      <text x="680" y="40" font-size="12" fill="#111827">Reads feature cards</text>
+      <text x="940" y="40" font-size="12" fill="#111827">Claims 30 days premium</text>
+      <text x="1160" y="40" font-size="12" fill="#111827">Invites team seats</text>
+    </g>
+
+    <!-- Row 2: Touchpoints -->
+    <g transform="translate(0, 140)">
+      <text x="20" y="40" font-size="12" font-weight="700" fill="#111827">Touchpoints</text>
+      <text x="180" y="40" font-size="12" fill="#6B7280">Web landing page</text>
+      <text x="420" y="40" font-size="12" fill="#6B7280">Email Client inbox</text>
+      <text x="680" y="40" font-size="12" fill="#6B7280">Smart layouts list</text>
+      <text x="940" y="40" font-size="12" fill="#6B7280">Claim modal CTA</text>
+      <text x="1160" y="40" font-size="12" fill="#6B7280">Product dashboard</text>
+    </g>
+
+    <!-- Row 3: Emotion Curve Visual -->
+    <g transform="translate(0, 240)">
+      <text x="20" y="60" font-size="12" font-weight="700" fill="#111827">Emotions</text>
+      <!-- Horizontal line -->
+      <line x1="180" y1="60" x2="1240" y2="60" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+      <!-- Journey curve path -->
+      <path d="M 230 60 Q 350 110 470 50 T 730 20 T 990 10 T 1200 15" fill="none" stroke="url(#grad-brand)" stroke-width="4"/>
+      <!-- Points on curve -->
+      <circle cx="230" cy="60" r="8" fill="#6366F1"/>
+      <circle cx="470" cy="50" r="8" fill="#EF4444"/>
+      <circle cx="730" cy="20" r="8" fill="#22C55E"/>
+      <circle cx="990" cy="10" r="8" fill="#22C55E"/>
+      <circle cx="1200" cy="15" r="8" fill="#6366F1"/>
+      
+      <text x="230" y="45" font-size="10" fill="#6B7280" text-anchor="middle">Curious</text>
+      <text x="470" y="75" font-size="10" fill="#EF4444" text-anchor="middle">Confused</text>
+      <text x="730" y="5" font-size="10" fill="#22C55E" text-anchor="middle">Interested</text>
+      <text x="990" y="-5" font-size="10" fill="#22C55E" text-anchor="middle">Delighted</text>
+    </g>
+
+    <!-- Row 4: Pain Points -->
+    <g transform="translate(0, 420)">
+      <text x="20" y="40" font-size="12" font-weight="700" fill="#111827">Pain Points</text>
+      <text x="180" y="40" font-size="11" fill="#EF4444">No welcome cues</text>
+      <text x="420" y="40" font-size="11" fill="#EF4444">Inbox rendering lags</text>
+      <text x="680" y="40" font-size="11" fill="#EF4444">Feature description opacity</text>
+      <text x="940" y="40" font-size="11" fill="#22C55E">Instant claim (easy)</text>
+      <text x="1160" y="40" font-size="11" fill="#22C55E">Clean team flow</text>
+    </g>
+  </g>
+  
+</svg>

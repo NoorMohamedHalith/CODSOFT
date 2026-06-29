@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowSphere Email Template — PDF Export</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* PDF-optimized print stylesheet */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #111827;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .pdf-page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 0;
+      background: white;
+      page-break-after: always;
+    }
+
+    /* COVER PAGE */
+    .cover {
+      background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+      width: 100%;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+    }
+
+    .cover-logo {
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .cover-title {
+      font-size: 48px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .cover-subtitle {
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 8px;
+    }
+
+    .cover-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      max-width: 400px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    .cover-badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 100px;
+      padding: 10px 24px;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .cover-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      position: absolute;
+      bottom: 40px;
+    }
+
+    /* CONTENT PAGE */
+    .content-page {
+      padding: 40px;
+      background: white;
+      min-height: 297mm;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #EEF2FF;
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+
+    .page-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #6366F1;
+    }
+
+    .page-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: #6B7280;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin: 24px 0 12px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      margin: 16px 0 8px;
+    }
+
+    p, li {
+      font-size: 13px;
+      color: #4B5563;
+      line-height: 1.7;
+    }
+
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin-bottom: 4px; }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .color-swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+    }
+
+    .swatch-color {
+      height: 56px;
+    }
+
+    .swatch-info {
+      padding: 8px;
+      background: white;
+    }
+
+    .swatch-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .swatch-hex {
+      font-size: 10px;
+      color: #6B7280;
+      font-family: monospace;
+    }
+
+    .section-list {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .section-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      background: #F8FAFC;
+      border-radius: 8px;
+      border-left: 3px solid #6366F1;
+    }
+
+    .section-num {
+      font-size: 18px;
+      font-weight: 900;
+      color: #6366F1;
+      width: 28px;
+    }
+
+    .section-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .section-components {
+      font-size: 11px;
+      color: #6B7280;
+    }
+
+    .type-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+
+    .type-table th {
+      background: #EEF2FF;
+      font-size: 11px;
+      font-weight: 700;
+      color: #6366F1;
+      padding: 8px 12px;
+      text-align: left;
+      letter-spacing: 0.5px;
+    }
+
+    .type-table td {
+      font-size: 12px;
+      color: #4B5563;
+      padding: 8px 12px;
+      border-bottom: 1px solid #F3F4F6;
+    }
+
+    .type-table tr:nth-child(even) td {
+      background: #FAFAFA;
+    }
+
+    .gradient-preview {
+      height: 50px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      margin: 8px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      background: #EEF2FF;
+      color: #6366F1;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin: 2px;
+    }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li::before { content: '✓ '; color: #22C55E; font-weight: 700; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-box {
+      background: #EEF2FF;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .info-box-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #6366F1;
+      margin-bottom: 8px;
+    }
+
+    @media print {
+      body { background: white; }
+      .pdf-page { page-break-after: always; }
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== PAGE 1: COVER ===== -->
+  <div class="pdf-page">
+    <div class="cover" style="position:relative;">
+      <div class="cover-logo">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L4 6V12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12V6L12 2Z" fill="white" fill-opacity="0.95"/>
+          <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+        </svg>
+      </div>
+      <p class="cover-badge">CODSOFT UI/UX Internship · Task 2</p>
+      <h1 class="cover-title">FlowSphere</h1>
+      <p class="cover-subtitle">Responsive Email Template</p>
+      <p class="cover-desc">A modern, minimal, production-ready Welcome & Product Launch email template built for the FlowSphere SaaS productivity platform.</p>
+      <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-top:20px;">Designed by Noor Mohamed Halith · 2025</p>
+      <p class="cover-meta">FlowSphere Email Template — Design Export · CODSOFT UI/UX Internship 2025</p>
+    </div>
+  </div>
+
+  <!-- ===== PAGE 2: PROJECT OVERVIEW ===== -->
+  <div class="pdf-page">
+    <div class="content-page">
+      <div class="page-header">
+        <span class="page-title">Project Overview</span>
+        <span class="page-tag">CODSOFT TASK 2 · FLOWSPHERE EMAIL</span>
+      </div>
+
+      <h2>About This Project</h2>
+      <p>This document is the design export for <strong>CODSOFT UI/UX Internship Task 2 — Responsive Email Template</strong>. The email is designed for <strong>FlowSphere</strong>, a fictional modern SaaS productivity platform.</p>
+      <br/>
+      <p>The email serves as a <strong>Welcome & Product Launch</strong> communication. It introduces the product, highlights key features, promotes a free trial offer, builds social proof, and drives app downloads.</p>
+
+      <h2>Email Sections</h2>
+      <div class="section-list">
+        <div class="section-item">
+          <span class="section-num">1</span>
+          <div>
+            <p class="section-name">Header</p>
+            <p class="section-components">FlowSphere Logo · Navigation: Features, Pricing, Contact</p>
+          </div>
+        </div>
+        <div class="section-item">
+          <span class="section-num">2</span>
+          <div>
+            <p class="section-name">Hero Section</p>
+            <p class="section-components">Launch Badge · Title "Welcome to FlowSphere" · Subtitle · Dashboard Illustration · "Get Started Free" CTA</p>
+          </div>
+        </div>
+        <div class="section-item">
+          <span class="section-num">3</span>
+          <div>
+            <p class="section-name">Features</p>
+            <p class="section-components">Smart Task Management · Team Collaboration · Productivity Analytics</p>
+          </div>
+        </div>
+        <div class="section-item">
+          <span class="section-num">4</span>
+          <div>
+            <p class="section-name">Special Offer</p>
+            <p class="section-components">30 Days Premium Free · "Claim Now — It's Free" Button</p>
+          </div>
+        </div>
+        <div class="section-item">
+          <span class="section-num">5</span>
+          <div>
+            <p class="section-name">Testimonials</p>
+            <p class="section-components">Sarah Chen (Nexus Labs) · Marcus Rivera (Velocity Inc) · ★★★★★ Ratings</p>
+          </div>
+        </div>
+        <div class="section-item">
+          <span class="section-num">6</span>
+          <div>
+            <p class="section-name">Download App</p>
+            <p class="section-components">Google Play Badge · App Store Badge</p>
+          </div>
+        </div>
+        <div class="section-item">
+          <span class="section-num">7</span>
+          <div>
+            <p class="section-name">Footer</p>
+            <p class="section-components">Social Icons · Contact Email · Website · Privacy Policy · Terms · Unsubscribe · Copyright</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:20px;">
+        <div class="info-box">
+          <p class="info-box-title">DESIGN PRINCIPLES</p>
+          <ul class="checklist">
+            <li>Modern SaaS minimal aesthetic</li>
+            <li>High readability — Inter font</li>
+            <li>Premium visual quality</li>
+            <li>Consistent design system</li>
+            <li>WCAG accessibility compliant</li>
+            <li>Email client compatible</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <p class="info-box-title">TECHNICAL SPECS</p>
+          <ul class="checklist">
+            <li>Max width: 640px (email standard)</li>
+            <li>Responsive: 375px–640px+</li>
+            <li>Pure HTML5 + CSS3</li>
+            <li>Inline SVG illustrations</li>
+            <li>No external dependencies</li>
+            <li>CSS custom properties</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE 3: COLOR SYSTEM ===== -->
+  <div class="pdf-page">
+    <div class="content-page">
+      <div class="page-header">
+        <span class="page-title">Color System</span>
+        <span class="page-tag">DESIGN TOKENS</span>
+      </div>
+
+      <h2>Primary Colors</h2>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#6366F1;"></div>
+          <div class="swatch-info"><p class="swatch-name">Primary</p><p class="swatch-hex">#6366F1</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#8B5CF6;"></div>
+          <div class="swatch-info"><p class="swatch-name">Secondary</p><p class="swatch-hex">#8B5CF6</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#4F46E5;"></div>
+          <div class="swatch-info"><p class="swatch-name">Primary Dark</p><p class="swatch-hex">#4F46E5</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#EEF2FF; border:1px solid #E5E7EB;"></div>
+          <div class="swatch-info"><p class="swatch-name">Primary Light</p><p class="swatch-hex">#EEF2FF</p></div>
+        </div>
+      </div>
+
+      <h2>Neutral Colors</h2>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#111827;"></div>
+          <div class="swatch-info"><p class="swatch-name">Text</p><p class="swatch-hex">#111827</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#6B7280;"></div>
+          <div class="swatch-info"><p class="swatch-name">Gray</p><p class="swatch-hex">#6B7280</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#E5E7EB;"></div>
+          <div class="swatch-info"><p class="swatch-name">Border</p><p class="swatch-hex">#E5E7EB</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#F8FAFC; border:1px solid #E5E7EB;"></div>
+          <div class="swatch-info"><p class="swatch-name">Surface</p><p class="swatch-hex">#F8FAFC</p></div>
+        </div>
+      </div>
+
+      <h2>Semantic Colors</h2>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#22C55E;"></div>
+          <div class="swatch-info"><p class="swatch-name">Success</p><p class="swatch-hex">#22C55E</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#DCFCE7;"></div>
+          <div class="swatch-info"><p class="swatch-name">Success Light</p><p class="swatch-hex">#DCFCE7</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#FFFFFF; border:1px solid #E5E7EB;"></div>
+          <div class="swatch-info"><p class="swatch-name">Background</p><p class="swatch-hex">#FFFFFF</p></div>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch-color" style="background:#EAECF8;"></div>
+          <div class="swatch-info"><p class="swatch-name">Outer BG</p><p class="swatch-hex">#EAECF8</p></div>
+        </div>
+      </div>
+
+      <h2>Gradients</h2>
+      <div class="gradient-preview" style="background: linear-gradient(135deg, #6366F1, #8B5CF6);">
+        Brand Gradient — linear-gradient(135deg, #6366F1 → #8B5CF6)
+      </div>
+      <div class="gradient-preview" style="background: linear-gradient(135deg, #EEF2FF, #F5F3FF); color: #6366F1;">
+        Hero Background — linear-gradient(135deg, #EEF2FF → #F5F3FF)
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE 4: TYPOGRAPHY ===== -->
+  <div class="pdf-page">
+    <div class="content-page">
+      <div class="page-header">
+        <span class="page-title">Typography System</span>
+        <span class="page-tag">INTER FONT FAMILY</span>
+      </div>
+
+      <h2>Font Family</h2>
+      <p><strong>Inter</strong> — A carefully crafted typeface designed for computer screens, optimized for legibility at small sizes. Available via Google Fonts.</p>
+      <p style="margin-top:8px;font-family:monospace;background:#F3F4F6;padding:8px 12px;border-radius:6px;font-size:12px;">@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');</p>
+
+      <h2>Type Scale</h2>
+      <table class="type-table">
+        <thead>
+          <tr>
+            <th>STYLE</th>
+            <th>SIZE</th>
+            <th>WEIGHT</th>
+            <th>LINE HEIGHT</th>
+            <th>USAGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>H1 / Hero Title</td><td>36px</td><td>800 ExtraBold</td><td>1.2</td><td>Main email heading</td></tr>
+          <tr><td>H2 / Section Title</td><td>26px</td><td>700 Bold</td><td>1.2</td><td>Section headings</td></tr>
+          <tr><td>H3 / Card Title</td><td>18px</td><td>700 Bold</td><td>1.4</td><td>Feature card titles</td></tr>
+          <tr><td>Body Regular</td><td>16px</td><td>400 Regular</td><td>1.6</td><td>Body text, paragraphs</td></tr>
+          <tr><td>Body Medium</td><td>16px</td><td>500 Medium</td><td>1.6</td><td>Emphasis body text</td></tr>
+          <tr><td>Small Regular</td><td>14px</td><td>400 Regular</td><td>1.7</td><td>Secondary descriptions</td></tr>
+          <tr><td>Small SemiBold</td><td>14px</td><td>600 SemiBold</td><td>1.6</td><td>Labels, nav links</td></tr>
+          <tr><td>Caption SemiBold</td><td>12px</td><td>600 SemiBold</td><td>1.6</td><td>Eyebrow text, metadata</td></tr>
+          <tr><td>Button Label</td><td>16px</td><td>600 SemiBold</td><td>1.0</td><td>CTA buttons</td></tr>
+          <tr><td>Offer Number</td><td>56px</td><td>900 Black</td><td>1.0</td><td>"30" Days counter</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Spacing System</h2>
+      <table class="type-table">
+        <thead>
+          <tr><th>TOKEN</th><th>VALUE</th><th>USAGE</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>--sp-1</td><td>4px</td><td>Icon padding, micro gaps</td></tr>
+          <tr><td>--sp-2</td><td>8px</td><td>Inline gaps, badge padding</td></tr>
+          <tr><td>--sp-4</td><td>16px</td><td>Card padding, nav gaps</td></tr>
+          <tr><td>--sp-6</td><td>24px</td><td>Section horizontal padding</td></tr>
+          <tr><td>--sp-8</td><td>32px</td><td>Section margins, offer margin</td></tr>
+          <tr><td>--sp-10</td><td>40px</td><td>Section vertical padding</td></tr>
+          <tr><td>--sp-12</td><td>48px</td><td>Hero top padding</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Border Radius</h2>
+      <p>
+        <span class="tag">sm: 6px</span>
+        <span class="tag">md: 10px (buttons)</span>
+        <span class="tag">lg: 16px (cards)</span>
+        <span class="tag">xl: 24px (container)</span>
+        <span class="tag">full: 9999px (badges)</span>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

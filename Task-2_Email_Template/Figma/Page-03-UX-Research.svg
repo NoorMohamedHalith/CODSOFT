@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Page 3 — UX Research</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, sans-serif; }
+    </style>
+    <linearGradient id="grad-brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F5F3FF"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(99,102,241,0.08)"/>
+    </filter>
+    <filter id="shadow-modal">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="900" fill="#FFFFFF"/>
+  
+  <!-- Page Header -->
+  <rect width="1440" height="80" fill="#FFFFFF"/>
+  <line x1="0" y1="79.5" x2="1440" y2="79.5" stroke="#E5E7EB" stroke-width="1"/>
+  <!-- Logo -->
+  <rect x="40" y="24" width="32" height="32" rx="8" fill="url(#grad-brand)"/>
+  <path d="M56 30l-4 2v4a4 4 0 008 0v-4l-4-2z" fill="white"/>
+  <text x="82" y="46" font-size="16" font-weight="800" fill="url(#grad-brand)">FlowSphere</text>
+  <text x="180" y="45" font-size="14" font-weight="400" fill="#6B7280" opacity="0.5">|</text>
+  <text x="196" y="46" font-size="15" font-weight="700" fill="#111827">UX Research & Competitive Mapping</text>
+  <!-- Page number -->
+  <rect x="1340" y="24" width="60" height="32" rx="16" fill="#EEF2FF"/>
+  <text x="1370" y="45" font-size="12" font-weight="700" fill="#6366F1" text-anchor="middle">PAGE 03</text>
+  
+
+  <!-- Left: Research Methodology -->
+  <g transform="translate(80, 140)">
+    <text x="0" y="30" font-size="20" font-weight="800" fill="#111827">Methodology &amp; Insights</text>
+    
+    
+      <g transform="translate(0, 60)" filter="url(#shadow)">
+        <rect width="460" height="130" rx="14" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="30" y="36" font-size="14" font-weight="800" fill="#6366F1">Competitive Analysis</text>
+        <text x="30" y="68" font-size="12" fill="#6B7280">Evaluated 6 major SaaS welcome emails (Asana, Monday, Notion</text>
+        <text x="30" y="86" font-size="12" fill="#6B7280">) for CTA placement, spacing, and mobile stacking behavior.</text>
+      </g>
+    
+      <g transform="translate(0, 220)" filter="url(#shadow)">
+        <rect width="460" height="130" rx="14" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="30" y="36" font-size="14" font-weight="800" fill="#6366F1">User Survey (n=12)</text>
+        <text x="30" y="68" font-size="12" fill="#6B7280">Conducted interviews with marketing leads. 70% stated email </text>
+        <text x="30" y="86" font-size="12" fill="#6B7280">layout complexity is the #1 reason for instant unsubscribe.</text>
+      </g>
+    
+      <g transform="translate(0, 380)" filter="url(#shadow)">
+        <rect width="460" height="130" rx="14" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="30" y="36" font-size="14" font-weight="800" fill="#6366F1">Data Benchmarks</text>
+        <text x="30" y="68" font-size="12" fill="#6B7280">Average tech sector click-through rate is 2.6%. The target l</text>
+        <text x="30" y="86" font-size="12" fill="#6B7280">ayout aimed to improve engagement to 4.5% using clear typography.</text>
+      </g>
+    
+  </g>
+
+  <!-- Right: Competitive Grid Table -->
+  <g transform="translate(600, 140)">
+    <text x="0" y="30" font-size="20" font-weight="800" fill="#111827">Competitive Feature Grid</text>
+
+    <!-- Table Header -->
+    <g transform="translate(0, 60)">
+      <rect width="760" height="40" rx="8" fill="#EEF2FF"/>
+      <text x="24" y="25" font-size="12" font-weight="800" fill="#6366F1">PRODUCT</text>
+      <text x="200" y="25" font-size="12" font-weight="800" fill="#6366F1">RESPONSIVE</text>
+      <text x="360" y="25" font-size="12" font-weight="800" fill="#6366F1">CTA VISIBILITY</text>
+      <text x="520" y="25" font-size="12" font-weight="800" fill="#6366F1">SPACING</text>
+      <text x="660" y="25" font-size="12" font-weight="800" fill="#6366F1">RATING</text>
+    </g>
+
+    <!-- Table Rows -->
+    
+      <g transform="translate(0, 110)">
+        <rect width="760" height="60" rx="8" fill="#EEF2FF" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="24" y="35" font-size="13" font-weight="700" fill="#6366F1">FlowSphere (Ours)</text>
+        <text x="200" y="35" font-size="12" fill="#111827">✅ Fluid Grid</text>
+        <text x="360" y="35" font-size="12" fill="#111827">🔥 Redundant CTAs</text>
+        <text x="520" y="35" font-size="12" fill="#111827">✨ 8pt System</text>
+        <text x="660" y="35" font-size="12" font-weight="600" fill="#111827">⭐️ 4.9</text>
+      </g>
+    
+      <g transform="translate(0, 180)">
+        <rect width="760" height="60" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="24" y="35" font-size="13" font-weight="700" fill="#111827">Competitor A</text>
+        <text x="200" y="35" font-size="12" fill="#111827">✅ Mobile-first</text>
+        <text x="360" y="35" font-size="12" fill="#111827">⚠️ Secondary scroll</text>
+        <text x="520" y="35" font-size="12" fill="#111827">⚠️ Tight margins</text>
+        <text x="660" y="35" font-size="12" font-weight="600" fill="#111827">⭐️ 3.8</text>
+      </g>
+    
+      <g transform="translate(0, 250)">
+        <rect width="760" height="60" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="24" y="35" font-size="13" font-weight="700" fill="#111827">Competitor B</text>
+        <text x="200" y="35" font-size="12" fill="#111827">❌ Fixed width</text>
+        <text x="360" y="35" font-size="12" fill="#111827">✅ Primary hero</text>
+        <text x="520" y="35" font-size="12" fill="#111827">⚠️ Mixed spacing</text>
+        <text x="660" y="35" font-size="12" font-weight="600" fill="#111827">⭐️ 3.5</text>
+      </g>
+    
+      <g transform="translate(0, 320)">
+        <rect width="760" height="60" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+        <text x="24" y="35" font-size="13" font-weight="700" fill="#111827">Competitor C</text>
+        <text x="200" y="35" font-size="12" fill="#111827">✅ Fluid Grid</text>
+        <text x="360" y="35" font-size="12" fill="#111827">❌ Low contrast</text>
+        <text x="520" y="35" font-size="12" fill="#111827">❌ Dense layouts</text>
+        <text x="660" y="35" font-size="12" font-weight="600" fill="#111827">⭐️ 3.1</text>
+      </g>
+    
+  </g>
+  
+</svg>

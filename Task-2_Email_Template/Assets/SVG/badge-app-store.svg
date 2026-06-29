@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    <linearGradient id="as-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1F2E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="60" rx="12" fill="url(#as-bg)"/>
+  <rect width="200" height="60" rx="12" stroke="rgba(255,255,255,0.10)" stroke-width="1" fill="none"/>
+  <!-- Apple logo (simplified) -->
+  <path d="M33 15C33 15 28 15 26 20C24 25 26 35 31 39C33.5 41.5 36 41 38 39C40 37 40 35 38 35C36 35 36 37 34 37C31.5 32 29 25 31.5 20C34 15 36.5 15 36.5 15C36.5 15 35 17.5 35 20" fill="white" opacity="0.95"/>
+  <ellipse cx="37.5" cy="13" rx="2.5" ry="2.5" fill="white" opacity="0.95"/>
+  <!-- Text -->
+  <text x="52" y="26" font-family="Inter,sans-serif" font-size="9" fill="rgba(255,255,255,0.65)" font-weight="400" letter-spacing="0.5">DOWNLOAD ON THE</text>
+  <text x="52" y="46" font-family="Inter,sans-serif" font-size="19" fill="white" font-weight="700" letter-spacing="-0.3">App Store</text>
+  
+</svg>

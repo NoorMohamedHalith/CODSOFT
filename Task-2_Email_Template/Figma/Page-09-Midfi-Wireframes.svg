@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="1080" viewBox="0 0 1440 1080" fill="none"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Page 9 — Mid-Fidelity Wireframes</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, sans-serif; }
+    </style>
+    <linearGradient id="grad-brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F5F3FF"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(99,102,241,0.08)"/>
+    </filter>
+    <filter id="shadow-modal">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="1080" fill="#FFFFFF"/>
+  
+  <!-- Page Header -->
+  <rect width="1440" height="80" fill="#FFFFFF"/>
+  <line x1="0" y1="79.5" x2="1440" y2="79.5" stroke="#E5E7EB" stroke-width="1"/>
+  <!-- Logo -->
+  <rect x="40" y="24" width="32" height="32" rx="8" fill="url(#grad-brand)"/>
+  <path d="M56 30l-4 2v4a4 4 0 008 0v-4l-4-2z" fill="white"/>
+  <text x="82" y="46" font-size="16" font-weight="800" fill="url(#grad-brand)">FlowSphere</text>
+  <text x="180" y="45" font-size="14" font-weight="400" fill="#6B7280" opacity="0.5">|</text>
+  <text x="196" y="46" font-size="15" font-weight="700" fill="#111827">Mid-Fidelity Proportion Blueprints</text>
+  <!-- Page number -->
+  <rect x="1340" y="24" width="60" height="32" rx="16" fill="#EEF2FF"/>
+  <text x="1370" y="45" font-size="12" font-weight="700" fill="#6366F1" text-anchor="middle">PAGE 09</text>
+  
+
+  <!-- Desktop blueprint -->
+  <g transform="translate(120, 140)">
+    <text x="0" y="24" font-size="16" font-weight="700" fill="#111827">Desktop Blueprint</text>
+    
+    <rect x="0" y="48" width="400" height="800" rx="12" fill="white" stroke="#6366F1" stroke-width="1"/>
+    
+    <!-- Spacing annotation lines -->
+    <line x1="-20" y1="48" x2="-20" y2="848" stroke="#8B5CF6" stroke-width="1.5"/>
+    <text x="-30" y="450" font-size="11" font-weight="700" fill="#8B5CF6" text-anchor="middle" transform="rotate(-90 -30 450)">800px Height Grid</text>
+
+    <!-- Layout detail blueprints -->
+    <g transform="translate(20, 68)">
+      <!-- Header -->
+      <rect width="360" height="40" rx="6" fill="#F8FAFC"/>
+      <circle cx="30" cy="20" r="10" fill="#E5E7EB"/>
+      <rect x="50" y="16" width="60" height="8" rx="3" fill="#E5E7EB"/>
+      <rect x="240" y="16" width="30" height="8" rx="3" fill="#E5E7EB"/>
+      <rect x="280" y="16" width="30" height="8" rx="3" fill="#E5E7EB"/>
+      <rect x="320" y="16" width="30" height="8" rx="3" fill="#E5E7EB"/>
+
+      <!-- Hero -->
+      <rect x="0" y="56" width="360" height="230" rx="10" fill="#F8FAFC"/>
+      <rect x="120" y="76" width="120" height="16" rx="4" fill="#E5E7EB"/>
+      <rect x="60" y="104" width="240" height="28" rx="6" fill="#E5E7EB"/>
+      <rect x="90" y="142" width="180" height="12" rx="4" fill="#E5E7EB"/>
+      <rect x="110" y="196" width="140" height="36" rx="8" fill="#6366F1"/>
+      <text x="180" y="218" font-size="11" font-weight="700" fill="white" text-anchor="middle">PRIMARY CTA</text>
+      
+      <!-- Features -->
+      <rect x="0" y="302" width="110" height="130" rx="8" fill="#F8FAFC"/>
+      <circle cx="55" cy="342" r="16" fill="#E5E7EB"/>
+      <rect x="20" y="376" width="70" height="10" rx="3" fill="#E5E7EB"/>
+      <rect x="15" y="394" width="80" height="6" rx="2" fill="#E5E7EB"/>
+      <rect x="20" y="404" width="70" height="6" rx="2" fill="#E5E7EB"/>
+
+      <rect x="125" y="302" width="110" height="130" rx="8" fill="#F8FAFC"/>
+      <circle cx="180" cy="342" r="16" fill="#E5E7EB"/>
+      <rect x="145" y="376" width="70" height="10" rx="3" fill="#E5E7EB"/>
+      <rect x="140" y="394" width="80" height="6" rx="2" fill="#E5E7EB"/>
+
+      <rect x="250" y="302" width="110" height="130" rx="8" fill="#F8FAFC"/>
+      <circle cx="305" cy="342" r="16" fill="#E5E7EB"/>
+      <rect x="270" y="376" width="70" height="10" rx="3" fill="#E5E7EB"/>
+      <rect x="265" y="394" width="80" height="6" rx="2" fill="#E5E7EB"/>
+    </g>
+  </g>
+
+  <!-- Mobile blueprint -->
+  <g transform="translate(680, 140)">
+    <text x="0" y="24" font-size="16" font-weight="700" fill="#111827">Mobile Blueprint</text>
+    <rect x="0" y="48" width="280" height="800" rx="12" fill="white" stroke="#6366F1" stroke-width="1"/>
+
+    <g transform="translate(16, 68)">
+      <rect width="248" height="40" rx="6" fill="#F8FAFC"/>
+      <circle cx="20" cy="20" r="10" fill="#E5E7EB"/>
+      <rect x="40" y="16" width="50" height="8" rx="3" fill="#E5E7EB"/>
+      <rect x="200" y="16" width="30" height="8" rx="3" fill="#E5E7EB"/>
+
+      <rect x="0" y="56" width="248" height="210" rx="8" fill="#F8FAFC"/>
+      <rect x="64" y="76" width="120" height="16" rx="4" fill="#E5E7EB"/>
+      <rect x="34" y="104" width="180" height="24" rx="6" fill="#E5E7EB"/>
+      <rect x="54" y="176" width="140" height="36" rx="8" fill="#6366F1"/>
+    </g>
+  </g>
+
+  <!-- Spec callout box (Right) -->
+  <g transform="translate(1020, 188)">
+    <rect width="340" height="752" rx="16" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="30" y="40" font-size="14" font-weight="700" fill="#111827">Proportion Speccing</text>
+
+    <g transform="translate(30, 80)">
+      
+        <g transform="translate(0, 0)">
+          <text x="0" y="18" font-size="10.5" font-weight="700" fill="#6366F1" letter-spacing="0.5">GRID WIDTH</text>
+          <text x="0" y="40" font-size="16" font-weight="800" fill="#111827">640px Max width</text>
+          <text x="0" y="60" font-size="12" fill="#6B7280">Ensures standard presentation cross-client.</text>
+        </g>
+      
+        <g transform="translate(0, 150)">
+          <text x="0" y="18" font-size="10.5" font-weight="700" fill="#6366F1" letter-spacing="0.5">SIDE MARGINS</text>
+          <text x="0" y="40" font-size="16" font-weight="800" fill="#111827">24px Padding</text>
+          <text x="0" y="60" font-size="12" fill="#6B7280">Allows copy breathing space on mobile views.</text>
+        </g>
+      
+        <g transform="translate(0, 300)">
+          <text x="0" y="18" font-size="10.5" font-weight="700" fill="#6366F1" letter-spacing="0.5">TYPO HIERARCHY</text>
+          <text x="0" y="40" font-size="16" font-weight="800" fill="#111827">Ratio 1.4</text>
+          <text x="0" y="60" font-size="12" fill="#6B7280">Visual scaling from 36px title to 12px caption.</text>
+        </g>
+      
+        <g transform="translate(0, 450)">
+          <text x="0" y="18" font-size="10.5" font-weight="700" fill="#6366F1" letter-spacing="0.5">ACCESSIBLE COLOR</text>
+          <text x="0" y="40" font-size="16" font-weight="800" fill="#111827">Contrast 4.5:1</text>
+          <text x="0" y="60" font-size="12" fill="#6B7280">All body text is #111827 for AAA clarity.</text>
+        </g>
+      
+    </g>
+  </g>
+  
+</svg>

@@ -1,0 +1,26 @@
+{
+  "name": "flowsphere-email-task2",
+  "version": "1.0.0",
+  "description": "CODSOFT UI/UX Internship Task 2 — FlowSphere Responsive Email Template",
+  "author": "Noor Mohamed Halith",
+  "license": "MIT",
+  "scripts": {
+    "generate-assets": "node generate-assets.js",
+    "generate-pdf":    "node generate-pdf.js",
+    "build":           "node generate-assets.js && node generate-pdf.js",
+    "open":            "start index.html",
+    "open-mobile":     "start mobile.html"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.0.0"
+  },
+  "keywords": [
+    "codsoft",
+    "uiux",
+    "email-template",
+    "responsive",
+    "flowsphere",
+    "saas",
+    "internship"
+  ]
+}

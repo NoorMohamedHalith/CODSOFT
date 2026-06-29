@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="200" viewBox="0 0 700 200"
+     fill="none" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>FlowSphere — Buttons</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    </style>
+    <!-- Brand gradient -->
+    <linearGradient id="grad-brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <!-- Hero bg gradient -->
+    <linearGradient id="grad-hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F5F3FF"/>
+    </linearGradient>
+    <!-- White fade gradient for offer orbs -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <!-- Drop shadows -->
+    <filter id="shadow-card" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="rgba(99,102,241,0.10)"/>
+    </filter>
+    <filter id="shadow-btn" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(99,102,241,0.35)"/>
+    </filter>
+    <filter id="shadow-float" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(99,102,241,0.18)"/>
+    </filter>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="rgba(0,0,0,0.08)"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="200" fill="#F8FAFC"/>
+  <!-- Header -->
+  <rect width="700" height="50" fill="url(#grad-brand)"/>
+  <text x="24" y="32" font-size="16" font-weight="700" fill="white">FlowSphere — Button Components</text>
+  <text x="570" y="32" font-size="11" fill="rgba(255,255,255,0.65)">CODSOFT Task 2</text>
+
+  <!-- Labels -->
+  <text x="90"  y="76" text-anchor="middle" font-size="10" fill="#6B7280" font-weight="600">PRIMARY</text>
+  <text x="262" y="76" text-anchor="middle" font-size="10" fill="#6B7280" font-weight="600">SECONDARY</text>
+  <text x="426" y="76" text-anchor="middle" font-size="10" fill="#6B7280" font-weight="600">OFFER (on dark)</text>
+  <text x="590" y="76" text-anchor="middle" font-size="10" fill="#6B7280" font-weight="600">GHOST</text>
+
+  <!-- Primary -->
+  <g transform="translate(24,84)" filter="url(#shadow-btn)">
+    <rect width="132" height="46" rx="10" fill="url(#grad-brand)"/>
+    <text x="66" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="white">→ Get Started</text>
+  </g>
+
+  <!-- Secondary -->
+  <g transform="translate(196,84)">
+    <rect width="132" height="46" rx="10" fill="#FFFFFF" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="66" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="#6366F1">Learn More</text>
+  </g>
+
+  <!-- Offer on dark -->
+  <g transform="translate(360,80)">
+    <rect width="132" height="54" rx="12" fill="url(#grad-brand)"/>
+    <rect x="8" y="8" width="116" height="38" rx="8" fill="#FFFFFF"/>
+    <text x="66" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#6366F1">Claim Now</text>
+  </g>
+
+  <!-- Ghost -->
+  <g transform="translate(524,84)">
+    <rect width="132" height="46" rx="10" fill="transparent" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="66" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#6B7280">Cancel</text>
+  </g>
+
+  <!-- State labels -->
+  <text x="24"  y="148" font-size="9.5" fill="#6B7280">Default state</text>
+  <text x="196" y="148" font-size="9.5" fill="#6B7280">Default state</text>
+  <text x="360" y="148" font-size="9.5" fill="#6B7280">Dark bg context</text>
+  <text x="524" y="148" font-size="9.5" fill="#6B7280">Default state</text>
+
+  <!-- Radius / specs -->
+  <text x="24" y="170" font-size="10" fill="#6B7280">radius: 10px · height: 46px · Inter 600</text>
+  <text x="360" y="170" font-size="10" fill="#6B7280">Gradient: #6366F1→#8B5CF6 · shadow: 0 6px 20px</text>
+  
+</svg>
